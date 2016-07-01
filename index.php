@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <!-- head details -->
+  <!-- browser website title bar -->
+  <title>Cathal Chaffee</title>
+  <meta charset = "UTF-8" />
+  
+  <!-- jquery cdn -->
+  <script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <!-- locally created stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets\stylesheets\index.css">
+  <link rel="shortcut icon" type="image/x-icon" href="celtic_c.ico"/>
+  
+  <!-- gotten from slides example http://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+<body>
+  <header class="navbar navbar-fixed-top" style="background-color: #fff">
+    <div class="container-fluid">
+      <img id="logo" src="assets\images\logo.png" style="width: 100px">
+      <ul class="nav navbar-nav navbar-right nav-list">
+        <li class="btn-link nav-link" onclick="stopInterval()">Hold Background</li>
+        <li class="btn-link nav-link">About</li>  
+        <li class="btn-link nav-link">Blog</li>      
+      </ul>
+    </div>
+  </header>
+  <div id="positioned">
+    <img src="assets\images\snowirons.jpg" class="slides-img banner-img affix">
+    <img src="assets\images\winter_plain.jpg" class="slides-img banner-img affix">
+    <img src="assets\images\winter_river.jpg" class="slides-img banner-img affix">
+  
+    <a class="w3-btn-floating noselection w3-display-topleft w3-hover-dark-grey nonderline" style="top:45%" onclick="plusImg(-1)"><</a>
+    <a class="w3-btn-floating noselection w3-display-topright w3-hover-dark-grey nonderline" style="top:45%" onclick="plusImg(+1)">></a>
+  </div>
+  <div class="btn-group-vertical btn-group-lg mobile-nav" role="group" aria-label="...">
+    <button type="button" class="btn btn-default bolded" onclick="stopInterval()">Hold Background</button>
+    <button type="button" class="btn btn-default bolded">About</button>
+    <button type="button" class="btn btn-default bolded">Blog</button>
+  </div>
+  <script>
+    var myVar = setInterval(myCall, 10000);
+    var index = 1;
+    showImg(index);
+    
+    function myCall() {
+      plusImg(1);
+    }
+    
+    function plusImg(n) {
+      showImg(index += n);
+    }
+    
+    function showImg(n) {
+      
+      var i;
+      var x = document.getElementsByClassName("slides-img");
+      
+      if(n>x.length) { index = 1 }
+      if(n < 1) { index = x.length }
+      for(i = 0; i<x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[index-1].style.display = "block";
+    }
+    
+    function stopInterval() {
+      clearInterval(myVar);
+      var x = document.getElementsByClassName("nonderline");
+      x[0].style.display = "none";
+      x[1].style.display = "none";
+    }
+  </script>
+</body>
+</html>
