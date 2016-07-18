@@ -20,40 +20,85 @@
 
     <!-- locally created stylesheet -->
     <link rel="stylesheet" type="text/css" href="..\assets\stylesheets\index.css">
+    <link rel="stylesheet" type="text/css" href="..\assets\stylesheets\about.css">
     <link rel="shortcut icon" type="image/x-icon" href="..\assets\images\celtic_c.ico"/>
     
     <!-- gotten from slides example http://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- style sheet from http://www.w3schools.com/lib/w3.css -->
     <link rel="stylesheet" href="..\assets\stylesheets\w3styles.css">
+    
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Bungee+Shade" rel="stylesheet">
   </head>
   <body>
+    <!-- website navbar -->
     <header class="navbar navbar-fixed-top" style="background-color: #fff">
       <div class="container-fluid">
         <img id="logo" src="..\assets\images\logo.png" style="width: 100px">
         <ul class="nav navbar-nav navbar-right nav-list">
-          <li class="btn-link nav-link" onclick="stopInterval()">Hold Background</li>
-          <li class="btn-link nav-link" href="app\views\about.html">About</li>  
-          <li class="btn-link nav-link">Blog</li>      
+          <li class="btn-link nav-link" onclick="stopInterval()">Hold Background</li> 
+          <li class="btn-link nav-link">Blog</li>    
+          <li class="btn-link nav-link" onclick="location.href='../../index.html'">Home</li>
         </ul>
       </div>
     </header>
+    <!-- Background images html -->
     <div id="positioned">
-      <img src="..\assets\images\snowirons.jpg" class="slides-img banner-img affix">
-      <img src="..\assets\images\winter_plain.jpg" class="slides-img banner-img affix">
-      <img src="..\assets\images\winter_river.jpg" class="slides-img banner-img affix">
+      <img src="..\assets\images\snowirons.jpg" class="background-img slides-img banner-img affix">
+      <img src="..\assets\images\winter_plain.jpg" class="background-img slides-img banner-img affix">
+      <img src="..\assets\images\winter_river.jpg" class="background-img slides-img banner-img affix">
     
       <a class="w3-btn-floating noselection w3-display-topleft w3-hover-dark-grey nonderline" style="top:45%" onclick="plusImg(-1)"><</a>
       <a class="w3-btn-floating noselection w3-display-topright w3-hover-dark-grey nonderline" style="top:45%" onclick="plusImg(+1)">></a>
     </div>
     <div class="btn-group-vertical btn-group-lg mobile-nav" role="group" aria-label="...">
       <button type="button" class="btn btn-default bolded" onclick="stopInterval()">Hold Background</button>
-      <button type="button" class="btn btn-default bolded">About</button>
       <button type="button" class="btn btn-default bolded">Blog</button>
+      <button type="button" class="btn btn-default bolded" onclick="location.href='../../index.html'">Home</button>
     </div>
-    <div class="well">
-      <p>test</p>
+    <!-- Aboout me information NON-mobile -->
+    <div id="about-div" class="well col-xs-offset-2 col-xs-8">
+      <div class="col-xs-6">
+        <img id="profile-img" src="..\assets\images\cathal-rounded.png" class="affix">
+      </div>
+      <div class="col-xs-6">
+        <h2 style="font-family: 'Bungee Shade';"><b>Cathal Chaffee</b></h2>
+        <div id="about-text" class="well">
+          <p style="font-family: 'Arima Madurai', cursive; font-size: 20px; color: #5c5b5d;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
+          It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
+          Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
+          looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, 
+          and going through the cites of the word in classical literature, discovered the undoubtable source. 
+          Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" 
+          (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, 
+          very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a 
+          line in section 1.10.32.</p>
+          <p style="font-family: 'Arima Madurai', cursive; font-size: 20px; color: #5c5b5d;">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
+          Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also 
+          reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+        </div>
+      </div>
     </div>
+    <!-- Aboout me information Mobile -->
+    <div id="about-div-mobile" class="well">
+      <img id="profile-img" src="..\assets\images\cathal-rounded.png" style="display:block; margin:auto; max-width:100%;">
+      <br/>
+      <h2 style="color: #5c5b5d;"><b>Cathal Chaffee</b></h2>
+      <p style="font-family: 'Arima Madurai', cursive; font-size: 20px; color: #619dd0;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
+          It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
+          Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
+          looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, 
+          and going through the cites of the word in classical literature, discovered the undoubtable source. 
+          Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" 
+          (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, 
+          very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a 
+          line in section 1.10.32.</p>
+      <p style="font-family: 'Arima Madurai', cursive; font-size: 20px; color: #619dd0;">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
+          Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also 
+          reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+    </div>
+    <!-- All JavaScript code -->
     <script>
       var myVar = setInterval(myCall, 10000);
       var index = 1;

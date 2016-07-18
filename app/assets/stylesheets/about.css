@@ -1,0 +1,33 @@
+/* displays on non-mobile */
+#about-div {
+  position: relative;
+  top: 55px;
+  background: transparent;
+  border: transparent;
+}
+
+/* for displays on mobile */
+#about-div-mobile {
+  position: relative;
+  display: none;
+}
+
+#profile-img {
+  margin-top: 70px;
+}
+
+/* creates background opacity without effecting text */
+#about-text {
+  background: rgba(245, 245, 245, 0.7);
+  border: transparent;
+}
+
+@media (max-width: 1200px) {
+  #about-div {
+    display: none;
+  }
+  #about-div-mobile {
+    display: block;
+  }
+  
+}
