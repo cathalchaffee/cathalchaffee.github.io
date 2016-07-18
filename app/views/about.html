@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
   <head>
     <!-- head details -->
     <!-- browser website title bar -->
@@ -19,37 +19,40 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
     <!-- locally created stylesheet -->
-    <link rel="stylesheet" type="text/css" href="app\assets\stylesheets\index.css">
-    <link rel="shortcut icon" type="image/x-icon" href="app\assets\images\celtic_c.ico"/>
+    <link rel="stylesheet" type="text/css" href="..\assets\stylesheets\index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="..\assets\images\celtic_c.ico"/>
     
     <!-- gotten from slides example http://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- style sheet from http://www.w3schools.com/lib/w3.css -->
-    <link rel="stylesheet" href="app\assets\stylesheets\w3styles.css">
+    <link rel="stylesheet" href="..\assets\stylesheets\w3styles.css">
   </head>
   <body>
     <header class="navbar navbar-fixed-top" style="background-color: #fff">
       <div class="container-fluid">
-        <img id="logo" src="app\assets\images\logo.png" style="width: 100px">
+        <img id="logo" src="..\assets\images\logo.png" style="width: 100px">
         <ul class="nav navbar-nav navbar-right nav-list">
           <li class="btn-link nav-link" onclick="stopInterval()">Hold Background</li>
-          <li class="btn-link nav-link" onclick="location.href='app/views/about.html'">About</li>  
+          <li class="btn-link nav-link" href="app\views\about.html">About</li>  
           <li class="btn-link nav-link">Blog</li>      
         </ul>
       </div>
     </header>
     <div id="positioned">
-      <img src="app\assets\images\snowirons.jpg" class="slides-img banner-img affix">
-      <img src="app\assets\images\winter_plain.jpg" class="slides-img banner-img affix">
-      <img src="app\assets\images\winter_river.jpg" class="slides-img banner-img affix">
+      <img src="..\assets\images\snowirons.jpg" class="slides-img banner-img affix">
+      <img src="..\assets\images\winter_plain.jpg" class="slides-img banner-img affix">
+      <img src="..\assets\images\winter_river.jpg" class="slides-img banner-img affix">
     
       <a class="w3-btn-floating noselection w3-display-topleft w3-hover-dark-grey nonderline" style="top:45%" onclick="plusImg(-1)"><</a>
       <a class="w3-btn-floating noselection w3-display-topright w3-hover-dark-grey nonderline" style="top:45%" onclick="plusImg(+1)">></a>
     </div>
     <div class="btn-group-vertical btn-group-lg mobile-nav" role="group" aria-label="...">
       <button type="button" class="btn btn-default bolded" onclick="stopInterval()">Hold Background</button>
-      <button type="button" class="btn btn-default bolded" onclick="location.href='app/views/about.html'">About</button>
+      <button type="button" class="btn btn-default bolded">About</button>
       <button type="button" class="btn btn-default bolded">Blog</button>
+    </div>
+    <div class="well">
+      <p>test</p>
     </div>
     <script>
       var myVar = setInterval(myCall, 10000);
